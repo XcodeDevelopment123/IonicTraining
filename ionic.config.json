@@ -1,0 +1,7 @@
+{
+  "name": "cameraExercise",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
