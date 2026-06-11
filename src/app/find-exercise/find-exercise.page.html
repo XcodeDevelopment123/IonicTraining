@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>FindExercise</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div>SearchUser
+
+    <ion-grid>
+      <ion-row style="height: 200px;">
+        <ion-col size="5">
+          <img style="height: 200px;" alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+
+        </ion-col>
+        <ion-col size="7">
+
+          <div>
+
+            <h1>Name : {{User.Name}}</h1>
+            <h1>Gender : {{User.Gender}}</h1>
+            <h1>Address : {{User.Address}}</h1>
+
+            
+          </div>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </div>
+
+  <ion-button (click)="filterGender('Male')">Male</ion-button>
+  <ion-button (click)="filterGender('Female')">Female</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let pair of ResultList" >
+      <ion-card (click)="SearchUser(pair.Id)">
+        <ion-card-header>
+          <ion-card-title>{{pair.Name}}</ion-card-title>
+          <ion-card-subtitle>{{pair.Gender}}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
