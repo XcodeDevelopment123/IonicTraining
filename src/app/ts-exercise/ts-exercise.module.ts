@@ -13,7 +13,8 @@ import { TsExercisePage } from './ts-exercise.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    TsExercisePageRoutingModule
+    TsExercisePageRoutingModule 
+    
   ],
   declarations: [TsExercisePage]
 })
